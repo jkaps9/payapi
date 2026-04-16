@@ -1,0 +1,119 @@
+/* dm-serif-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "" DM Serif Display "";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/dm-serif-display-v17-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* public-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "" Public Sans "";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../assets/fonts/public-sans-v21-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* public-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "" Public Sans "";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../assets/fonts/public-sans-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@mixin colors__gradient__1 {
+  background: linear-gradient(
+    180deg,
+    #9cb6cd 0%,
+    #9ab3ca 42%,
+    #557496 72%,
+    #475178 100%
+  );
+}
+
+@mixin colors__gradient__2 {
+  background: linear-gradient(180deg, #454545 0%, #999999 23%, #ffffff 100%);
+}
+
+@mixin colors__gradient__3 {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    #bababa 22%,
+    rgba(255, 255, 255, 0) 55%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@mixin textpreset1 {
+  font-size: 72px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+@mixin textpreset2 {
+  font-size: 56px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1;
+}
+
+@mixin textpreset3 {
+  font-size: 48px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1.15;
+}
+
+@mixin textpreset4 {
+  font-size: 32px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 1.25;
+}
+
+@mixin textpreset5 {
+  font-size: 24px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 1.35;
+}
+
+@mixin textpreset6 {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.39;
+}
+
+@mixin textpreset7bold {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@mixin textpreset7regular {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+@mixin textpreset9 {
+  font-size: 11px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
