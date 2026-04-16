@@ -83,6 +83,26 @@ p {
   }
 }
 
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-375;
+  text-align: center;
+}
+
+.nav__item {
+  position: relative;
+  a {
+    @include mixins.textpreset6;
+    text-decoration: none;
+    color: var(--btn-text-color);
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
 header {
   padding: variables.$spacing-500 0;
   .nav-toggle {
@@ -125,26 +145,6 @@ header {
     top: 0;
     width: 80%;
     z-index: 1000;
-
-    .nav__list {
-      display: flex;
-      flex-direction: column;
-      gap: variables.$spacing-375;
-      text-align: center;
-    }
-
-    .nav__item {
-      position: relative;
-      a {
-        @include mixins.textpreset6;
-        text-decoration: none;
-        color: var(--btn-text-color);
-        opacity: 0.7;
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
   }
 }
 
