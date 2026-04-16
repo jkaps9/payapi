@@ -42,6 +42,13 @@ body {
     color 0.3s ease;
 }
 
+.page__background-image {
+  position: absolute;
+  // TODO: check figma for values of top left etc.
+  top: -525px;
+  left: -185px;
+  z-index: -1;
+}
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
