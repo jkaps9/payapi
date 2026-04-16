@@ -75,8 +75,11 @@ p {
   color: var(--text-color);
 }
 
-nav a {
+.nav__item > a {
   @include mixins.textpreset7bold;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 header {
@@ -128,15 +131,15 @@ header {
       gap: variables.$spacing-375;
       text-align: center;
     }
-  }
 
-  .nav__item {
-    position: relative;
-    a {
-      @include mixins.textpreset6;
-      text-decoration: none;
-      color: var(--btn-text-color);
-      opacity: 0.7;
+    .nav__item {
+      position: relative;
+      a {
+        @include mixins.textpreset6;
+        text-decoration: none;
+        color: var(--btn-text-color);
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -173,7 +176,9 @@ footer {
 
     .nav__item {
       a {
-        color: var(--text-color);
+        color: var(--header-text-color);
+        text-decoration: none;
+        opacity: 0.7;
       }
     }
   }
