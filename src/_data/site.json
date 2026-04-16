@@ -2,13 +2,14 @@
   "name": "PayAPI",
   "navigation": [
     {
-      "text": "About",
-      "url": "/about/"
-    },
-    {
       "text": "Pricing",
       "url": "/pricing/"
     },
+    {
+      "text": "About",
+      "url": "/about/"
+    },
+
     {
       "text": "Contact",
       "url": "/contact/"
