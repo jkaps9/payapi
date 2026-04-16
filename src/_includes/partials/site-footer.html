@@ -1,5 +1,12 @@
 <footer class="bg-dark">
   <div class="container">
+    <a
+      href="{{ '/' | url }}"
+      class="logo"
+      aria-label="{{ site.name }} - home"
+    >
+      {% include "svgs/logo.svg" %}
+    </a>
     <nav class="footer-nav">
       <ul class="nav__list">
         {% for item in site.navigation %}
@@ -9,5 +16,16 @@
         {% endfor %}
       </ul>
     </nav>
+    <ul class="socials-list">
+      <li class="socials-list__item">
+        <a href="https://facebook.com">{% include "svgs/facebook.svg" %}</a>
+      </li>
+      <li class="socials-list__item">
+        <a href="https://twitter.com">{% include "svgs/twitter.svg" %}</a>
+      </li>
+      <li class="socials-list__item">
+        <a href="https://linkedin.com">{% include "svgs/linkedin.svg" %}</a>
+      </li>
+    </ul>
   </div>
 </footer>
