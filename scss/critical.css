@@ -154,7 +154,8 @@ select {
   --primary-color: #1e3a8a;
   --accent-color: #ba4270;
   --accent-color-hover: #da6d97;
-  --bg-color: #f1f1f1;
+  --bg-color: #edf3f8;
+  --bg-color-dark: #1b262f;
   --btn-text-color: #fbfcfe;
   --header-text-color: #36536b;
   --text-color: #6c8294;
@@ -173,7 +174,7 @@ body {
   font-family: "Public Sans", sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
-  background-color: black;
+  position: relative;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -228,72 +229,39 @@ nav a {
 }
 
 header {
-  position: relative;
-}
-header .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-header .logo {
-  max-height: 4rem;
-  color: var(--primary-color);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-header .logo__company-name {
-  font-size: 2rem;
-  font-weight: 900;
-}
-header .logo svg {
-  height: 4rem;
-  width: auto;
+  padding: 2.5rem 0;
 }
 header .nav-toggle {
-  position: absolute;
-  right: 0;
   background: none;
   border: none;
-}
-header .nav-toggle svg.close {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
-}
-header:has(.main-nav.visible) svg.close {
-  visibility: visible;
-  height: auto;
+  cursor: pointer;
   position: relative;
+  z-index: 1000;
 }
-header:has(.main-nav.visible) svg.hamburger {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
+header .nav-toggle .close {
+  display: none;
 }
-header .navbar {
-  position: relative;
-  padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
+header:has(.main-nav.visible) .close {
+  display: block;
+}
+header:has(.main-nav.visible) .hamburger {
+  display: none;
 }
 header .main-nav {
-  visibility: hidden;
-  height: 0;
-  position: absolute;
-  font-size: 1.125rem;
+  display: none;
 }
 header .main-nav.visible {
-  background-color: var(--bg-color);
-  visibility: visible;
-  height: auto;
-  top: 100%;
-  right: 0;
-  left: 0;
+  align-items: center;
+  background-color: var(--bg-color-dark);
+  bottom: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.5rem;
   padding: 2rem 1.5rem 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
   z-index: 1000;
 }
 header .main-nav.visible .nav__list {
@@ -306,21 +274,12 @@ header .nav__item {
   position: relative;
 }
 header .nav__item a {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.39;
   text-decoration: none;
-  color: var(--text-color);
-}
-header .nav__item::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  background-color: var(--accent-color);
-  bottom: -4px;
-  left: 0;
-  transition: width 0.3s;
-}
-header .nav__item:hover::after {
-  width: 100%;
+  color: var(--btn-text-color);
 }
 
 footer {
@@ -336,24 +295,21 @@ footer {
     letter-spacing: -0.4px;
     line-height: 1.15;
   }
-  header .nav-toggle {
-    height: 0;
-    visibility: hidden;
-  }
   header .navbar {
-    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+  header .nav-toggle {
+    display: none;
   }
   header .main-nav {
-    visibility: visible;
-    height: auto;
-    position: relative;
     display: flex;
-    align-items: center;
-    gap: clamp(1.875rem, -0.3393rem + 4.6131vw, 3.8125rem);
+    flex: 1;
   }
   header .nav__list {
     display: flex;
-    gap: clamp(1.25rem, 0.3929rem + 1.7857vw, 2rem);
+    gap: 2.5rem;
   }
   header .nav__item a {
     color: var(--text-color);
