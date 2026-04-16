@@ -1,5 +1,13 @@
 <footer>
   <div class="container">
-    <p>Copyright 2025</p>
+    <nav class="footer-nav">
+      <ul class="nav__list">
+        {% for item in site.navigation %}
+          <li class="nav__item">
+            <a href="{{ item.url | url }}">{{ item.text }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
   </div>
 </footer>
