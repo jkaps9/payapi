@@ -1,6 +1,6 @@
 <header>
   <div class="container">
-    <div class="navbar">
+    <div class="navbar row">
       <a
         href="{{ '/' | url }}"
         class="logo"
@@ -9,7 +9,7 @@
         {% include "svgs/logo.svg" %}
       </a>
       <nav
-        class="main-nav"
+        class="main-nav row"
         aria-label="main"
       >
         <ul class="nav__list">
@@ -27,8 +27,8 @@
         </a>
       </nav>
       <button class="nav-toggle">
-        {% include "svgs/menu.svg" %}
-        {% include "svgs/close.svg" %}
+        <div class="hamburger">{% include "svgs/menu.svg" %}</div>
+        <div class="close">{% include "svgs/close.svg" %}</div>
       </button>
     </div>
   </div>

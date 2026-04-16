@@ -79,74 +79,31 @@ nav a {
 }
 
 header {
-  position: relative;
-
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo {
-    max-height: 4rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    &__company-name {
-      font-size: 2rem;
-      font-weight: 900;
-    }
-
-    svg {
-      height: 4rem;
-      width: auto;
-    }
-  }
-
   .nav-toggle {
-    position: absolute;
-    right: 0;
     background: none;
     border: none;
+    cursor: pointer;
 
-    svg.close {
-      visibility: hidden;
-      height: 0;
-      position: absolute;
+    .close {
+      display: none;
     }
   }
 
   &:has(.main-nav.visible) {
-    svg.close {
-      visibility: visible;
-      height: auto;
-      position: relative;
+    .close {
+      display: block;
     }
-    svg.hamburger {
-      visibility: hidden;
-      height: 0;
-      position: absolute;
+    .hamburger {
+      display: none;
     }
-  }
-
-  .navbar {
-    position: relative;
-    padding: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem) 0;
   }
 
   .main-nav {
-    visibility: hidden;
-    height: 0;
-    position: absolute;
-    font-size: 1.125rem;
+    display: none;
   }
 
   .main-nav.visible {
     background-color: var(--bg-color);
-    visibility: visible;
     height: auto;
     top: 100%;
     right: 0;
@@ -200,27 +157,24 @@ footer {
     @include mixins.textpreset3;
   }
   header {
-    .nav-toggle {
-      height: 0;
-      visibility: hidden;
+    .navbar {
+      display: flex;
+      justify-content: flex-start;
+      gap: variables.$spacing-800;
     }
 
-    .navbar {
-      font-size: 1rem;
+    .nav-toggle {
+      display: none;
     }
 
     .main-nav {
-      visibility: visible;
-      height: auto;
-      position: relative;
       display: flex;
-      align-items: center;
-      gap: clamp(1.875rem, -0.3393rem + 4.6131vw, 3.8125rem);
+      flex: 1;
     }
 
     .nav__list {
       display: flex;
-      gap: clamp(1.25rem, 0.3929rem + 1.7857vw, 2rem);
+      gap: variables.$spacing-500;
     }
 
     .nav__item {
