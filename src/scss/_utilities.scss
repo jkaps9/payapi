@@ -13,21 +13,34 @@
   border-radius: variables.$corner-radius-full;
   box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
   cursor: pointer;
+  color: var(--btn-text-color);
   display: inline-flex;
   justify-content: center;
-  padding: 1em 2em;
+  padding: 1em 1.5em;
   text-decoration: none;
   &--primary {
     background-color: var(--accent-color);
-    color: var(--text-color);
     &:hover {
-      background-color: var(--text-color);
-      color: var(--accent-color);
+      background-color: var(--accent-color-hover);
     }
   }
   &--secondary {
+    border: 1px solid var(--btn-text-color);
+    &:hover {
+      background-color: var(--btn-text-color);
+      color: var(--text-color);
+    }
   }
   &--tertiary {
+    border: 1px solid variables.$colors-slate-700;
+    color: variables.$colors-slate-700;
+    min-width: 168px;
+    min-height: 48px;
+
+    &:hover {
+      background-color: variables.$colors-slate-700;
+      color: variables.$colors-neutral-0;
+    }
   }
 }
 

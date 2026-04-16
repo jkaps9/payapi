@@ -13,7 +13,8 @@
 
   --bg-color: #f1f1f1;
 
-  --text-color: #{variables.$colors-slate-50};
+  --btn-text-color: #{variables.$colors-slate-50};
+  --text-color: #{variables.$colors-slate-900};
 
   --border-color: #e0e0e0;
   --card-bg: #ffffff;
@@ -33,6 +34,7 @@ body {
   font-family: "Public Sans", sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
+  background-color: black;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
