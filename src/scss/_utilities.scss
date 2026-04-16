@@ -1,11 +1,17 @@
+@use "mixins";
+@use "variables";
+
 .accent-text {
   color: var(--accent-color);
 }
 
 .btn {
+  @include mixins.textpreset7bold;
   align-items: center;
   background: none;
   border: none;
+  border-radius: variables.$corner-radius-full;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
