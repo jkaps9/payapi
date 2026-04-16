@@ -158,6 +158,25 @@ header {
 
 footer {
   text-align: center;
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    // TODO: check figma for gap and padding
+    gap: variables.$spacing-400;
+    padding: variables.$spacing-400 0;
+  }
+  .logo {
+    svg * {
+      fill: variables.$colors-slate-50;
+    }
+  }
+  .socials-list {
+    align-items: center;
+    display: flex;
+    // TODO: check figma for gap
+    gap: variables.$spacing-200;
+  }
 }
 
 @media (min-width: 48rem) {
