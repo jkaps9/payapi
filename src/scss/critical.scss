@@ -14,7 +14,8 @@
   --bg-color: #f1f1f1;
 
   --btn-text-color: #{variables.$colors-slate-50};
-  --text-color: #{variables.$colors-slate-900};
+  --header-text-color: #{variables.$colors-slate-700};
+  --text-color: #{variables.$colors-slate-500};
 
   --border-color: #e0e0e0;
   --card-bg: #ffffff;
@@ -48,6 +49,15 @@ body {
 
 section {
   padding: var(--section-spacing) 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-text-color);
 }
 
 p {

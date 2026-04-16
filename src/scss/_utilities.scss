@@ -28,7 +28,7 @@
     border: 1px solid var(--btn-text-color);
     &:hover {
       background-color: var(--btn-text-color);
-      color: var(--text-color);
+      color: variables.$colors-slate-900;
     }
   }
   &--tertiary {
