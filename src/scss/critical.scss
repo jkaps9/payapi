@@ -139,6 +139,9 @@ header {
         text-decoration: none;
         color: var(--btn-text-color);
         opacity: 0.7;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }
