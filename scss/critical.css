@@ -131,7 +131,7 @@ select {
 }
 .btn--secondary:hover {
   background-color: var(--btn-text-color);
-  color: var(--text-color);
+  color: #213648;
 }
 .btn--tertiary {
   border: 1px solid #36536b;
@@ -156,7 +156,8 @@ select {
   --accent-color-hover: #da6d97;
   --bg-color: #f1f1f1;
   --btn-text-color: #fbfcfe;
-  --text-color: #213648;
+  --header-text-color: #36536b;
+  --text-color: #6c8294;
   --border-color: #e0e0e0;
   --card-bg: #ffffff;
   --footer-bg: #111;
@@ -186,8 +187,44 @@ section {
   padding: var(--section-spacing) 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-text-color);
+}
+
+h1,
+h2 {
+  font-size: 32px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 1.25;
+}
+
+h3 {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.39;
+}
+
 p {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.85;
   color: var(--text-color);
+}
+
+nav a {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 header {
@@ -291,6 +328,14 @@ footer {
 }
 
 @media (min-width: 48rem) {
+  h1,
+  h2 {
+    font-size: 48px;
+    font-family: "DM Serif Display", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+  }
   header .nav-toggle {
     height: 0;
     visibility: hidden;
@@ -312,5 +357,14 @@ footer {
   }
   header .nav__item a {
     color: var(--text-color);
+  }
+}
+@media (min-width: 64rem) {
+  h1 {
+    font-size: 72px;
+    font-family: "DM Serif Display", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1;
   }
 }
