@@ -1,7 +1,7 @@
 /* dm-serif-display-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "" DM Serif Display "";
+  font-family: "DM Serif Display";
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/dm-serif-display-v17-latin-regular.woff2")
@@ -11,7 +11,7 @@
 /* public-sans-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "" Public Sans "";
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
   src: url("../assets/fonts/public-sans-v21-latin-regular.woff2")
@@ -20,7 +20,7 @@
 /* public-sans-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "" Public Sans "";
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 700;
   src: url("../assets/fonts/public-sans-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
