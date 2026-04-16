@@ -214,6 +214,14 @@ footer {
     }
   }
 
+  .our-clients {
+    &__logo-container {
+      display: grid;
+      // TODO: add gap
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   footer {
     .container {
       flex-direction: row;
