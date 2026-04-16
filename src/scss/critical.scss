@@ -60,8 +60,22 @@ h6 {
   color: var(--header-text-color);
 }
 
+h1,
+h2 {
+  @include mixins.textpreset4;
+}
+
+h3 {
+  @include mixins.textpreset6;
+}
+
 p {
+  @include mixins.textpreset7regular;
   color: var(--text-color);
+}
+
+nav a {
+  @include mixins.textpreset7bold;
 }
 
 header {
@@ -181,6 +195,10 @@ footer {
 }
 
 @media (min-width: 48rem) {
+  h1,
+  h2 {
+    @include mixins.textpreset3;
+  }
   header {
     .nav-toggle {
       height: 0;
@@ -210,5 +228,11 @@ footer {
         color: var(--text-color);
       }
     }
+  }
+}
+
+@media (min-width: 64rem) {
+  h1 {
+    @include mixins.textpreset1;
   }
 }
