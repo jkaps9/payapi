@@ -202,7 +202,7 @@ footer {
   }
 
   .nav__list {
-    display: flex;
+    flex-direction: row;
     gap: variables.$spacing-500;
   }
 
@@ -211,6 +211,18 @@ footer {
       color: var(--header-text-color);
       text-decoration: none;
       opacity: 0.7;
+    }
+  }
+
+  footer {
+    .container {
+      flex-direction: row;
+      gap: variables.$spacing-800;
+      justify-content: space-between;
+    }
+
+    .socials-list {
+      margin-left: auto;
     }
   }
 }
