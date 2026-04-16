@@ -49,3 +49,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+.bg-dark {
+  --header-text-color: var(--btn-text-color);
+  // TODO: adjust body text color too
+  background-color: var(--bg-color-dark);
+}
