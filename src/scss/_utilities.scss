@@ -3,10 +3,12 @@
 }
 
 .btn {
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
   padding: 1em 2em;
   text-decoration: none;
   &--primary {
@@ -16,6 +18,10 @@
       background-color: var(--text-color);
       color: var(--accent-color);
     }
+  }
+  &--secondary {
+  }
+  &--tertiary {
   }
 }
 
