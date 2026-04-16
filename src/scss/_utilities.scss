@@ -1,0 +1,20 @@
+.accent-text {
+  color: var(--accent-color);
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 1em 2em;
+  text-decoration: none;
+  &--primary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    &:hover {
+      background-color: var(--text-color);
+      color: var(--accent-color);
+    }
+  }
+}

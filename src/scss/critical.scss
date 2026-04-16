@@ -1,5 +1,6 @@
 @use "mixins";
 @use "reset";
+@use "utilities";
 @use "variables";
 @use "sass:map";
 
@@ -48,24 +49,6 @@ section {
 
 p {
   color: var(--text-color);
-}
-
-.accent-text {
-  color: var(--accent-color);
-}
-
-.btn--primary {
-  display: inline-block;
-  padding: 1em 2em;
-  text-decoration: none;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-
-  &:hover {
-  }
 }
 
 header {
