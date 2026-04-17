@@ -52,8 +52,11 @@
 
 .bg-dark {
   --header-text-color: var(--btn-text-color);
-  // TODO: adjust body text color too
+  --text-color: var(--btn-text-color);
   background-color: var(--bg-color-dark);
+  p {
+    opacity: 0.7;
+  }
 }
 
 form#demo {
