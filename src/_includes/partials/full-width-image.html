@@ -1,0 +1,26 @@
+<section class="full-width-image">
+  <picture>
+    <source
+      media="(max-width: 767px)"
+      sizes="(max-width: 767px) 100vw, 767px"
+      srcset="
+        {{ '/assets/images/about/mobile/image-team-members.jpg' | url }} 767w
+      "
+    />
+    <source
+      media="(min-width: 768px) and (max-width: 991px)"
+      sizes="(max-width: 991px) 70vw, 694px"
+      srcset="
+        {{ '/assets/images/about/tablet/image-team-members.jpg' | url }} 694w
+      "
+    />
+    <img
+      sizes="(max-width: 3500px) 40vw, 1400px"
+      srcset="
+        {{ '/assets/images/about/desktop/image-team-members.jpg' | url }} 1400w
+      "
+      src="{{ '/assets/images/about/desktop/image-team-members.jpg' | url }}"
+      alt=""
+    />
+  </picture>
+</section>

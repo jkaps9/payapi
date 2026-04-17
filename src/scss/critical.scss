@@ -292,6 +292,11 @@ footer {
   }
 }
 
+.full-width-image {
+  img {
+    width: 100%;
+  }
+}
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
