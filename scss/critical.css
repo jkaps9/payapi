@@ -185,9 +185,13 @@ body {
 
 .page__background-image {
   position: absolute;
-  top: -525px;
-  left: -185px;
+  top: -555px;
+  left: -50%;
   z-index: -1;
+}
+.page__background-image svg {
+  height: 780px;
+  width: 780px;
 }
 
 .container {
@@ -317,7 +321,7 @@ footer .container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 2rem 0;
 }
 footer .logo svg * {
@@ -333,6 +337,13 @@ footer .socials-list .socials-list__item:hover svg * {
 }
 
 @media (min-width: 48rem) {
+  .page__background-image {
+    left: -90px;
+  }
+  .page__background-image svg {
+    height: 949px;
+    width: 949px;
+  }
   h1,
   h2 {
     font-size: 48px;
