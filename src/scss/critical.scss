@@ -296,4 +296,20 @@ footer {
       width: 780px;
     }
   }
+
+  .hero {
+    .container {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &__content {
+      justify-content: center;
+      text-align: left;
+      gap: variables.$spacing-300;
+      p {
+        margin-top: calc(-1 * variables.$spacing-100);
+      }
+    }
+  }
 }
