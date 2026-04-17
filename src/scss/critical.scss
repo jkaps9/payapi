@@ -297,6 +297,33 @@ footer {
     width: 100%;
   }
 }
+
+.pricing {
+  .tier__features {
+    li {
+      align-items: center;
+      display: grid;
+      gap: variables.$spacing-100;
+      grid-template-columns: 1.5rem 6rem;
+
+      justify-content: center;
+
+      p {
+        grid-column: 2;
+      }
+    }
+    li.included {
+      p {
+        color: var(--header-text-color);
+      }
+    }
+    li:not(.included) {
+      svg {
+        display: none;
+      }
+    }
+  }
+}
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
