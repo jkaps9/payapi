@@ -298,9 +298,16 @@ footer {
   }
 
   .hero {
+    padding-top: 92px;
     .container {
       flex-direction: row-reverse;
       justify-content: space-between;
+    }
+
+    &__image {
+      img {
+        transform: scale(1.3);
+      }
     }
 
     &__content {
