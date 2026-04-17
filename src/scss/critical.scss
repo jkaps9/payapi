@@ -332,6 +332,15 @@ footer {
     }
   }
 
+  .features {
+    &__bottom {
+      align-items: stretch;
+      flex-direction: row;
+      gap: variables.$spacing-100;
+      justify-content: space-between;
+    }
+  }
+
   footer {
     .container {
       flex-direction: row;
@@ -397,6 +406,23 @@ footer {
       align-items: flex-start;
       max-width: 445px;
       text-align: start;
+    }
+  }
+
+  .features {
+    &__top {
+      .features__feature {
+        flex-direction: row;
+        &:last-child {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+    &__bottom {
+      align-items: stretch;
+      flex-direction: row;
+      gap: variables.$spacing-375;
+      justify-content: space-between;
     }
   }
 }
