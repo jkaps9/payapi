@@ -45,9 +45,15 @@ body {
 .page__background-image {
   position: absolute;
   top: -555px;
-  left: -185px;
+  left: -50%;
   z-index: -1;
+
+  svg {
+    height: 780px;
+    width: 780px;
+  }
 }
+
 .container {
   margin: 0 auto;
   max-width: var(--container-max-width);
@@ -192,6 +198,14 @@ footer {
 }
 
 @media (min-width: 48rem) {
+  .page__background-image {
+    left: -90px;
+    svg {
+      height: 949px;
+      width: 949px;
+    }
+  }
+
   h1,
   h2 {
     @include mixins.textpreset3;
