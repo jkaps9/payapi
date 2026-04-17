@@ -36,6 +36,7 @@ body {
   font-family: "Public Sans", sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
+  overflow-x: hidden;
   position: relative;
   transition:
     background-color 0.3s ease,
@@ -264,5 +265,15 @@ footer {
 @media (min-width: 64rem) {
   h1 {
     @include mixins.textpreset1;
+  }
+
+  .page__background-image {
+    top: -172px;
+    left: auto;
+    right: -140px;
+    svg {
+      height: 780px;
+      width: 780px;
+    }
   }
 }
