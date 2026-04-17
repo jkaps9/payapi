@@ -362,6 +362,20 @@ footer {
       margin-left: auto;
     }
   }
+
+  .about-hero {
+    // TODO: check Figma
+    &__content {
+      display: grid;
+      gap: variables.$spacing-400;
+      &__row {
+        display: grid;
+        gap: variables.$spacing-100;
+        grid-template-columns: 3fr 5fr;
+        text-align: start;
+      }
+    }
+  }
 }
 
 @media (min-width: 64rem) {
@@ -440,6 +454,17 @@ footer {
       flex-direction: row;
       justify-content: space-between;
       padding-bottom: 100px;
+    }
+  }
+
+  .about-hero {
+    .container {
+      flex-direction: column;
+      text-align: start;
+
+      h1 {
+        max-width: 840px;
+      }
     }
   }
 }
