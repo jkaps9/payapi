@@ -212,6 +212,49 @@ header {
   }
 }
 
+.features {
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-800;
+  }
+
+  &__top {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-1000;
+
+    .features__feature {
+      gap: variables.$spacing-600;
+    }
+  }
+
+  &__bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-600;
+
+    .features__feature {
+      gap: variables.$spacing-400;
+    }
+  }
+  .features__feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature__image {
+    margin: 0 auto;
+  }
+  .feature__content {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-200;
+  }
+}
 footer {
   text-align: center;
   .container {
