@@ -185,8 +185,14 @@ header {
 .our-clients {
   &__logo-container {
     display: grid;
-    // TODO: add gap
+    gap: variables.$spacing-500;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__logo {
+    svg * {
+      fill: variables.$colors-neutral-0;
+    }
   }
 }
 
