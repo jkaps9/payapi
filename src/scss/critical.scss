@@ -202,7 +202,6 @@ footer {
     align-items: center;
     display: flex;
     flex-direction: column;
-    // TODO: check figma for gap and padding
     gap: variables.$spacing-500;
     padding: variables.$spacing-400 0;
   }
@@ -214,8 +213,7 @@ footer {
   .socials-list {
     align-items: center;
     display: flex;
-    // TODO: check figma for gap
-    gap: variables.$spacing-200;
+    gap: variables.$spacing-300;
 
     .socials-list__item:hover {
       svg * {
