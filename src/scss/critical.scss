@@ -27,7 +27,7 @@
   --container-max-width: 70rem;
   --container-width: 90%;
 
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+  --section-spacing: #{variables.$spacing-1000};
   --card-padding: 1.5rem 2rem;
 }
 
@@ -183,6 +183,12 @@ header {
 }
 
 .our-clients {
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-700;
+  }
   &__logo-container {
     display: grid;
     gap: variables.$spacing-500;
@@ -192,6 +198,16 @@ header {
   &__logo {
     svg * {
       fill: variables.$colors-neutral-0;
+    }
+  }
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-400;
+
+    h2 {
+      margin-bottom: calc(-1 * variables.$spacing-100);
     }
   }
 }
@@ -325,6 +341,19 @@ footer {
         margin-top: calc(-1 * variables.$spacing-100);
         padding-left: variables.$spacing-375;
       }
+    }
+  }
+
+  .our-clients {
+    .container {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &__content {
+      align-items: flex-start;
+      max-width: 445px;
+      text-align: start;
     }
   }
 }
