@@ -59,6 +59,10 @@
   }
 }
 
+.large-text {
+  @include mixins.textpreset1;
+}
+
 form#demo {
   .form-group {
     display: flex;
