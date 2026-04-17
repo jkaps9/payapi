@@ -183,6 +183,12 @@ footer {
     display: flex;
     // TODO: check figma for gap
     gap: variables.$spacing-200;
+
+    .socials-list__item:hover {
+      svg * {
+        fill: var(--accent-color-hover);
+      }
+    }
   }
 }
 
