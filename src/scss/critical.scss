@@ -255,6 +255,16 @@ header {
     gap: variables.$spacing-200;
   }
 }
+
+.cta {
+  .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-375;
+  }
+}
+
 footer {
   text-align: center;
   .container {
@@ -422,6 +432,12 @@ footer {
       align-items: stretch;
       flex-direction: row;
       gap: variables.$spacing-375;
+      justify-content: space-between;
+    }
+  }
+  .cta {
+    .container {
+      flex-direction: row;
       justify-content: space-between;
     }
   }
