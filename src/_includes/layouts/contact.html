@@ -12,51 +12,51 @@
           <p>Thank you for submitting your request. We'll be in touch soon!</p>
         </div>
         <div class="form-group">
-          <label for="full-name">Name</label>
           <input
             type="text"
             id="full-name"
             name="full-name"
-            oninvalid="this.setCustomValidity('This field is required')"
+            oninvalid="this.setCustomValidity('This field can\'t be empty')"
             oninput="this.setCustomValidity('')"
+            placeholder="Name"
             required
           />
-          <div class="error-message">This field is required</div>
+          <div class="error-message">This field can't be empty</div>
         </div>
 
         <div class="form-group span-all">
-          <label for="email">Email Address</label>
           <input
             type="email"
             id="email"
             name="email"
             oninvalid="this.setCustomValidity('Please enter a valid email address')"
             oninput="this.setCustomValidity('')"
+            placeholder="Email Address"
             required
           />
           <div class="error-message">Please enter a valid email address</div>
         </div>
 
         <div class="form-group">
-          <label for="company-name">Company Name</label>
           <input
             type="text"
             id="company-name"
             name="company-name"
             oninvalid="this.setCustomValidity('This field is required')"
             oninput="this.setCustomValidity('')"
+            placeholder="Company Name"
             required
           />
           <div class="error-message">This field is required</div>
         </div>
 
         <div class="form-group span-all">
-          <label for="message">Message</label>
           <textarea
             name="message"
             id="message"
             oninvalid="this.setCustomValidity('This field is required')"
             oninput="this.setCustomValidity('')"
+            placeholder="Message"
             required
           ></textarea>
           <div class="error-message">This field is required</div>
