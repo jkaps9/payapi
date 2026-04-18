@@ -547,6 +547,30 @@ footer .socials-list .socials-list__item:hover svg * {
   display: none;
 }
 
+.about-hero .container {
+  gap: 2.5rem;
+}
+.about-hero__content {
+  gap: 3rem;
+}
+.about-hero__content__row {
+  gap: 1rem;
+}
+
+.about-stats .container {
+  border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+  border-top: 1px solid rgba(54, 83, 107, 0.25);
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+.about-values .container {
+  gap: 3rem;
+}
+.about-values__item {
+  gap: 1rem;
+}
+
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
@@ -555,8 +579,7 @@ footer .socials-list .socials-list__item:hover svg * {
     height: 949px;
     width: 949px;
   }
-  h1,
-  h2 {
+  h1 {
     font-size: 48px;
     font-family: "DM Serif Display", sans-serif;
     font-weight: 400;
@@ -602,14 +625,40 @@ footer .socials-list .socials-list__item:hover svg * {
   footer .socials-list {
     margin-left: auto;
   }
+  .about-hero .container {
+    gap: 3rem;
+  }
   .about-hero__content {
     display: grid;
-    gap: 2rem;
+    gap: 4rem;
   }
   .about-hero__content__row {
+    align-items: flex-start;
     display: grid;
     gap: 0.5rem;
-    grid-template-columns: 3fr 5fr;
+    grid-template-columns: 1fr 2fr;
+    text-align: start;
+  }
+  .about-stats .container {
+    align-items: flex-start;
+    border: none;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 0;
+    text-align: start;
+  }
+  .about-stats .container > * {
+    border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    flex: 1;
+    padding: 1rem 0;
+  }
+  .about-values__item {
+    align-items: flex-start;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 2fr;
     text-align: start;
   }
   .pricing__container {
@@ -625,6 +674,13 @@ footer .socials-list .socials-list__item:hover svg * {
     font-weight: 400;
     letter-spacing: -0.5px;
     line-height: 1;
+  }
+  h2 {
+    font-size: 48px;
+    font-family: "DM Serif Display", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
   }
   .page__background-image {
     top: -172px;
@@ -685,10 +741,23 @@ footer .socials-list .socials-list__item:hover svg * {
   }
   .about-hero .container {
     flex-direction: column;
+    gap: 3.5rem;
     text-align: start;
   }
   .about-hero .container h1 {
     max-width: 840px;
+  }
+  .about-hero__content__row {
+    gap: 30px;
+  }
+  .about-stats .container {
+    gap: 30px;
+  }
+  .about-values .container {
+    max-width: 920px;
+  }
+  .about-values__item {
+    gap: 30px;
   }
   .pricing .container {
     align-items: flex-start;
