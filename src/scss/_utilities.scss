@@ -76,6 +76,23 @@
   width: 100%;
 }
 
+input,
+textarea {
+  @include mixins.textpreset7bold;
+  align-items: center;
+  border: none;
+  color: var(--header-text-color);
+  display: flex;
+  min-height: 3rem;
+  opacity: 0.5;
+  padding: 0 variables.$spacing-375;
+  &::placeholder {
+    @include mixins.textpreset7bold;
+    color: var(--header-text-color);
+    opacity: 1;
+  }
+}
+
 form#demo {
   .form-group {
     display: flex;
@@ -83,21 +100,65 @@ form#demo {
     gap: variables.$spacing-200;
   }
   input {
-    @include mixins.textpreset7bold;
-    align-items: center;
     background: var(--btn-text-color);
-    border: none;
     border-radius: variables.$corner-radius-full;
     box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
-    color: var(--header-text-color);
+  }
+}
+
+form#contact-form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: variables.$spacing-300;
+  .form-group {
+    align-self: stretch;
+    align-items: stretch;
     display: flex;
-    min-height: 3rem;
-    opacity: 0.5;
-    padding: 0 variables.$spacing-375;
-    &::placeholder {
-      @include mixins.textpreset7bold;
+    flex-direction: column;
+    gap: variables.$spacing-100;
+    text-align: start;
+  }
+
+  .consent-row {
+    flex-direction: row;
+    gap: variables.$spacing-300;
+
+    label {
       color: var(--header-text-color);
-      opacity: 0.5;
+    }
+  }
+
+  input,
+  textarea {
+    background: none;
+    border-bottom: 1px solid rgba(54, 83, 107, 0.5);
+    &::placeholder {
+      @include mixins.textpreset7regular;
+    }
+  }
+
+  textarea {
+    height: calc(3lh + 1.4em); /* 3 line heights + vertical padding */
+    resize: block;
+  }
+
+  /* Error state */
+  .error-message {
+    padding-top: 0.25rem;
+    color: variables.$colors-red-600;
+    display: none;
+  }
+
+  .form-group:has(input:user-invalid),
+  .form-group:has(textarea:user-invalid) {
+    input,
+    textarea {
+      border-color: variables.$colors-red-600;
+    }
+
+    .error-message {
+      display: block;
     }
   }
 }
