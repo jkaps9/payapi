@@ -504,6 +504,13 @@ footer .socials-list .socials-list__item:hover svg * {
 .pricing .price__tier {
   gap: 1.5rem;
 }
+.pricing .price__tier h2 {
+  font-size: 24px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  line-height: 1.35;
+}
 .pricing .top {
   align-self: stretch;
   display: flex;
@@ -605,6 +612,11 @@ footer .socials-list .socials-list__item:hover svg * {
     grid-template-columns: 3fr 5fr;
     text-align: start;
   }
+  .pricing__container {
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
 }
 @media (min-width: 64rem) {
   h1 {
@@ -677,5 +689,23 @@ footer .socials-list .socials-list__item:hover svg * {
   }
   .about-hero .container h1 {
     max-width: 840px;
+  }
+  .pricing .container {
+    align-items: flex-start;
+    gap: 4.5rem;
+  }
+  .pricing__container {
+    gap: 30px;
+  }
+  .pricing .price__tier {
+    align-items: flex-start;
+    text-align: start;
+  }
+  .pricing .price__tier h2 {
+    font-size: 32px;
+    font-family: "DM Serif Display", sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+    line-height: 1.25;
   }
 }
