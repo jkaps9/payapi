@@ -180,34 +180,95 @@ select {
   width: 100%;
 }
 
-form#demo .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-form#demo input {
+input,
+textarea {
   font-size: 15px;
   font-family: "Public Sans", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   align-items: center;
-  background: var(--btn-text-color);
   border: none;
-  border-radius: 999px;
-  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
   color: var(--header-text-color);
   display: flex;
   min-height: 3rem;
   opacity: 0.5;
   padding: 0 30px;
 }
-form#demo input::placeholder {
+input::placeholder,
+textarea::placeholder {
   font-size: 15px;
   font-family: "Public Sans", sans-serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--header-text-color);
-  opacity: 0.5;
+  opacity: 1;
+}
+
+form#demo .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+form#demo input {
+  background: var(--btn-text-color);
+  border-radius: 999px;
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+}
+
+form#contact-form {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+form#contact-form .form-group {
+  align-self: stretch;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: start;
+}
+form#contact-form .consent-row {
+  flex-direction: row;
+  gap: 1.5rem;
+}
+form#contact-form .consent-row label {
+  color: var(--header-text-color);
+}
+form#contact-form input,
+form#contact-form textarea {
+  background: none;
+  border-bottom: 1px solid rgba(54, 83, 107, 0.5);
+}
+form#contact-form input::placeholder,
+form#contact-form textarea::placeholder {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.85;
+}
+form#contact-form textarea {
+  height: calc(3lh + 1.4em); /* 3 line heights + vertical padding */
+  resize: block;
+}
+form#contact-form {
+  /* Error state */
+}
+form#contact-form .error-message {
+  padding-top: 0.25rem;
+  color: #ff0000;
+  display: none;
+}
+form#contact-form .form-group:has(input:user-invalid) input,
+form#contact-form .form-group:has(input:user-invalid) textarea,
+form#contact-form .form-group:has(textarea:user-invalid) input,
+form#contact-form .form-group:has(textarea:user-invalid) textarea {
+  border-color: #ff0000;
+}
+form#contact-form .form-group:has(input:user-invalid) .error-message,
+form#contact-form .form-group:has(textarea:user-invalid) .error-message {
+  display: block;
 }
 
 @media (min-width: 48rem) {
