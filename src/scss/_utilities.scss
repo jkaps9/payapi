@@ -92,7 +92,10 @@ textarea {
     opacity: 1;
   }
 }
-
+body {
+  // sets checkbox color
+  accent-color: var(--accent-color);
+}
 form#demo {
   .form-group {
     display: flex;
@@ -144,9 +147,8 @@ form#contact-form {
   }
 
   input[type="checkbox"] {
-    // TODO: style radio button
-    width: auto;
-    height: auto;
+    width: 24px;
+    height: 24px;
   }
 
   /* Error state */
