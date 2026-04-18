@@ -150,6 +150,12 @@ select {
   justify-content: space-between;
 }
 
+.column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .bg-dark {
   --header-text-color: var(--btn-text-color);
   --text-color: var(--btn-text-color);
@@ -165,6 +171,13 @@ select {
   font-weight: 400;
   letter-spacing: -0.5px;
   line-height: 1;
+}
+
+.divider {
+  background-color: var(--header-text-color);
+  height: 1px;
+  opacity: 0.25;
+  width: 100%;
 }
 
 form#demo .form-group {
@@ -481,6 +494,35 @@ footer .socials-list .socials-list__item:hover svg * {
   width: 100%;
 }
 
+.pricing .container {
+  gap: 3rem;
+}
+.pricing__container {
+  justify-content: center;
+  gap: 3rem;
+}
+.pricing .price__tier {
+  gap: 1.5rem;
+}
+.pricing .top {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.pricing .price {
+  font-size: 56px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.4px;
+  line-height: 1;
+  color: var(--header-text-color);
+}
+.pricing .tier__features {
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: start;
+}
 .pricing .tier__features li {
   align-items: center;
   display: grid;
