@@ -377,6 +377,15 @@ footer {
   }
 }
 
+.about-values {
+  .container {
+    gap: variables.$spacing-600;
+  }
+  &__item {
+    gap: variables.$spacing-200;
+  }
+}
+
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
@@ -481,6 +490,16 @@ footer {
         flex: 1;
         padding: variables.$spacing-200 0;
       }
+    }
+  }
+
+  .about-values {
+    &__item {
+      align-items: flex-start;
+      display: grid;
+      gap: variables.$spacing-100;
+      grid-template-columns: 1fr 2fr;
+      text-align: start;
     }
   }
 
@@ -596,6 +615,15 @@ footer {
 
   .about-stats {
     .container {
+      gap: variables.$spacing-375;
+    }
+  }
+
+  .about-values {
+    .container {
+      max-width: 920px;
+    }
+    &__item {
       gap: variables.$spacing-375;
     }
   }
