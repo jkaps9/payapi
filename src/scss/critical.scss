@@ -388,6 +388,23 @@ footer {
   }
 }
 
+.contact {
+  .container {
+    display: grid;
+    gap: variables.$spacing-900;
+  }
+  &__content {
+    display: grid;
+    gap: variables.$spacing-500;
+  }
+  &__clients {
+    h3 {
+      @include mixins.textpreset5;
+    }
+    gap: variables.$spacing-400;
+  }
+}
+
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
@@ -647,6 +664,7 @@ footer {
 
   .contact {
     &__content {
+      align-items: center;
       display: flex;
     }
   }
