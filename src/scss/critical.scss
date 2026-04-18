@@ -182,6 +182,12 @@ header {
   }
 }
 
+.logo-container {
+  display: grid;
+  gap: variables.$spacing-500;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .our-clients {
   .container {
     align-items: center;
@@ -189,17 +195,13 @@ header {
     flex-direction: column;
     gap: variables.$spacing-700;
   }
-  &__logo-container {
-    display: grid;
-    gap: variables.$spacing-500;
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  &__logo {
+  .logo {
     svg * {
       fill: variables.$colors-neutral-0;
     }
   }
+
   &__content {
     align-items: center;
     display: flex;
@@ -428,11 +430,9 @@ footer {
     }
   }
 
-  .our-clients {
-    &__logo-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
+  .logo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .features {
@@ -642,6 +642,12 @@ footer {
       h2 {
         @include mixins.textpreset4;
       }
+    }
+  }
+
+  .contact {
+    &__content {
+      display: flex;
     }
   }
 }
