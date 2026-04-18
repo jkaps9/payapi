@@ -355,6 +355,19 @@ footer {
     }
   }
 }
+
+.about-hero {
+  .container {
+    gap: variables.$spacing-500;
+  }
+  &__content {
+    gap: variables.$spacing-600;
+    &__row {
+      gap: variables.$spacing-200;
+    }
+  }
+}
+
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
@@ -427,14 +440,21 @@ footer {
   }
 
   .about-hero {
-    // TODO: check Figma
+    h2 {
+      @include mixins.textpreset4;
+    }
+    .container {
+      gap: variables.$spacing-600;
+    }
     &__content {
       display: grid;
-      gap: variables.$spacing-400;
+      gap: variables.$spacing-800;
+
       &__row {
+        align-items: flex-start;
         display: grid;
         gap: variables.$spacing-100;
-        grid-template-columns: 3fr 5fr;
+        grid-template-columns: 1fr 2fr;
         text-align: start;
       }
     }
@@ -531,10 +551,17 @@ footer {
   .about-hero {
     .container {
       flex-direction: column;
+      gap: variables.$spacing-700;
       text-align: start;
 
       h1 {
         max-width: 840px;
+      }
+    }
+
+    &__content {
+      &__row {
+        gap: variables.$spacing-375;
       }
     }
   }
