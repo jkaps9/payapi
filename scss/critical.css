@@ -252,6 +252,10 @@ form#contact-form textarea {
   height: calc(3lh + 1.4em); /* 3 line heights + vertical padding */
   resize: block;
 }
+form#contact-form input[type=checkbox] {
+  width: auto;
+  height: auto;
+}
 form#contact-form {
   /* Error state */
 }
