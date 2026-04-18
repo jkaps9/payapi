@@ -368,6 +368,15 @@ footer {
   }
 }
 
+.about-stats {
+  .container {
+    border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    gap: variables.$spacing-500;
+    padding: variables.$spacing-200 0;
+  }
+}
+
 @media (min-width: 48rem) {
   .page__background-image {
     left: -90px;
@@ -377,8 +386,7 @@ footer {
     }
   }
 
-  h1,
-  h2 {
+  h1 {
     @include mixins.textpreset3;
   }
   header {
@@ -440,9 +448,6 @@ footer {
   }
 
   .about-hero {
-    h2 {
-      @include mixins.textpreset4;
-    }
     .container {
       gap: variables.$spacing-600;
     }
@@ -460,6 +465,25 @@ footer {
     }
   }
 
+  .about-stats {
+    .container {
+      align-items: flex-start;
+      border: none;
+      flex-direction: row;
+      gap: variables.$spacing-100;
+      justify-content: space-between;
+      padding: 0;
+      text-align: start;
+
+      & > * {
+        border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+        border-top: 1px solid rgba(54, 83, 107, 0.25);
+        flex: 1;
+        padding: variables.$spacing-200 0;
+      }
+    }
+  }
+
   .pricing {
     &__container {
       align-items: flex-start;
@@ -472,6 +496,10 @@ footer {
 @media (min-width: 64rem) {
   h1 {
     @include mixins.textpreset1;
+  }
+
+  h2 {
+    @include mixins.textpreset3;
   }
 
   .page__background-image {
@@ -563,6 +591,12 @@ footer {
       &__row {
         gap: variables.$spacing-375;
       }
+    }
+  }
+
+  .about-stats {
+    .container {
+      gap: variables.$spacing-375;
     }
   }
 
