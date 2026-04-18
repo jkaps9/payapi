@@ -114,6 +114,7 @@ form#contact-form {
   display: flex;
   flex-direction: column;
   gap: variables.$spacing-300;
+  position: relative;
   .form-group {
     align-self: stretch;
     align-items: stretch;
@@ -172,19 +173,33 @@ form#contact-form {
 
   /* Succes Message */
   .success-message {
-    position: absolute;
-    top: -1rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: fit-content;
-    background-color: var(--header-text-color);
+    background: var(--header-text-color);
     border-radius: variables.$corner-radius-12;
+    bottom: 4rem;
     color: var(--bg-color);
-    padding: variables.$spacing-300;
     display: none;
+    left: 0;
+    margin: 0 auto;
+    padding: variables.$spacing-300;
+    position: absolute;
+    right: 0;
+    width: fit-content;
+    z-index: 2;
+    h3,
+    p {
+      color: inherit;
+    }
+
+    p {
+      margin-top: 1em;
+      opacity: 0.8;
+    }
     &.visible {
       display: block;
+    }
+    .title {
+      justify-content: flex-start;
+      gap: variables.$spacing-200;
     }
   }
 }
