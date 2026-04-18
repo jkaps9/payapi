@@ -169,6 +169,24 @@ form#contact-form {
       display: block;
     }
   }
+
+  /* Succes Message */
+  .success-message {
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: fit-content;
+    background-color: var(--header-text-color);
+    border-radius: variables.$corner-radius-12;
+    color: var(--bg-color);
+    padding: variables.$spacing-300;
+    display: none;
+    &.visible {
+      display: block;
+    }
+  }
 }
 
 @media (min-width: 48rem) {
