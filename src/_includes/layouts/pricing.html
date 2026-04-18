@@ -1,20 +1,20 @@
 {% extends "layouts/base.html" %}
 {% block content %}
   <section class="pricing">
-    <div class="container">
+    <div class="container column">
       <h1>Pricing</h1>
-      <div class="pricing__container">
-        <div class="price__tier">
+      <div class="pricing__container column">
+        <div class="price__tier column">
           <div class="top">
             <h2 class="accent-text">Free Plan</h2>
             <p>
               Build and test using our core set of products with up to 100 API
               requests
             </p>
-            <p class="large-text price">$0.00</p>
+            <p class="price">$0.00</p>
           </div>
           <div class="divider"></div>
-          <ul class="tier__features">
+          <ul class="column tier__features">
             <li class="included">
               {% include "svgs/icon-check.svg" %}
               <p>Transactions</p>
@@ -48,17 +48,17 @@
           <button class="btn btn--tertiary">Request Access</button>
         </div>
 
-        <div class="price__tier">
+        <div class="price__tier column">
           <div class="top">
             <h2 class="accent-text">Basic Plan</h2>
             <p>
               Launch your project with unlimited requests and no contractual
               minimums
             </p>
-            <p class="large-text price">$249.00</p>
+            <p class="price">$249.00</p>
           </div>
           <div class="divider"></div>
-          <ul class="tier__features">
+          <ul class="column tier__features">
             <li class="included">
               {% include "svgs/icon-check.svg" %}
               <p>Transactions</p>
@@ -92,17 +92,17 @@
           <button class="btn btn--tertiary">Request Access</button>
         </div>
 
-        <div class="price__tier">
+        <div class="price__tier column">
           <div class="top">
             <h2 class="accent-text">Premium Plan</h2>
             <p>
               Get tailored solutions, volume pricing, and dedicated support for
               your team
             </p>
-            <p class="large-text price">$499.00</p>
+            <p class="price">$499.00</p>
           </div>
           <div class="divider"></div>
-          <ul class="tier__features">
+          <ul class="column tier__features">
             <li class="included">
               {% include "svgs/icon-check.svg" %}
               <p>Transactions</p>
@@ -139,57 +139,4 @@
     </div>
   </section>
   {% include "partials/cta.html" %}
-  <!-- Pricing
-    About
-    Contact
-    Schedule a Demo
-
-    Pricing
-
-    Free Plan
-    Build and test using our core set of products with up to 100 API requests
-    $0.00
-    
-    Transactions
-    Auth
-    Identity
-    Investments
-    Assets
-    Liabilities
-    Income
-    Request Access
-
-    Basic Plan
-    Launch your project with unlimited requests and no contractual minimums
-    $249.00
-    
-    Transactions
-    Auth
-    Identity
-    Investments
-    Assets
-    Liabilities
-    Income
-    Request Access
-
-    Premium Plan
-    Get tailored solutions, volume pricing, and dedicated support for your team
-    $499.00
-    
-    Transactions
-    Auth
-    Identity
-    Investments
-    Assets
-    Liabilities
-    Income
-    Request Access
-
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
-
-    Pricing
-    About
-    Contact -->
 {% endblock %}

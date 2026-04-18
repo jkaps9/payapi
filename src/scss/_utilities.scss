@@ -50,6 +50,12 @@
   justify-content: space-between;
 }
 
+.column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .bg-dark {
   --header-text-color: var(--btn-text-color);
   --text-color: var(--btn-text-color);
@@ -61,6 +67,13 @@
 
 .large-text {
   @include mixins.textpreset1;
+}
+
+.divider {
+  background-color: var(--header-text-color);
+  height: 1px;
+  opacity: 0.25;
+  width: 100%;
 }
 
 form#demo {

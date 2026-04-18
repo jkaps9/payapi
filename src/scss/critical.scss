@@ -299,7 +299,35 @@ footer {
 }
 
 .pricing {
+  .container {
+    gap: variables.$spacing-600;
+  }
+
+  &__container {
+    justify-content: center;
+    gap: variables.$spacing-600;
+  }
+
+  .price__tier {
+    gap: variables.$spacing-300;
+  }
+
+  .top {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-300;
+  }
+
+  .price {
+    @include mixins.textpreset2;
+    color: var(--header-text-color);
+  }
+
   .tier__features {
+    align-items: flex-start;
+    gap: variables.$spacing-100;
+    text-align: start;
     li {
       align-items: center;
       display: grid;
