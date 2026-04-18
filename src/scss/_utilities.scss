@@ -143,6 +143,12 @@ form#contact-form {
     resize: block;
   }
 
+  input[type="checkbox"] {
+    // TODO: style radio button
+    width: auto;
+    height: auto;
+  }
+
   /* Error state */
   .error-message {
     padding-top: 0.25rem;
