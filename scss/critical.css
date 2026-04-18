@@ -224,6 +224,7 @@ form#contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  position: relative;
 }
 form#contact-form .form-group {
   align-self: stretch;
@@ -277,6 +278,38 @@ form#contact-form .form-group:has(textarea:user-invalid) textarea {
 form#contact-form .form-group:has(input:user-invalid) .error-message,
 form#contact-form .form-group:has(textarea:user-invalid) .error-message {
   display: block;
+}
+form#contact-form {
+  /* Succes Message */
+}
+form#contact-form .success-message {
+  background: var(--header-text-color);
+  border-radius: 12px;
+  bottom: 4rem;
+  color: var(--bg-color);
+  display: none;
+  left: 0;
+  margin: 0 auto;
+  padding: 1.5rem;
+  position: absolute;
+  right: 0;
+  width: fit-content;
+  z-index: 2;
+}
+form#contact-form .success-message h3,
+form#contact-form .success-message p {
+  color: inherit;
+}
+form#contact-form .success-message p {
+  margin-top: 1em;
+  opacity: 0.8;
+}
+form#contact-form .success-message.visible {
+  display: block;
+}
+form#contact-form .success-message .title {
+  justify-content: flex-start;
+  gap: 1rem;
 }
 
 @media (min-width: 48rem) {
