@@ -310,6 +310,9 @@ footer {
 
   .price__tier {
     gap: variables.$spacing-300;
+    h2 {
+      @include mixins.textpreset5;
+    }
   }
 
   .top {
@@ -436,6 +439,14 @@ footer {
       }
     }
   }
+
+  .pricing {
+    &__container {
+      align-items: flex-start;
+      flex-direction: row;
+      gap: variables.$spacing-100;
+    }
+  }
 }
 
 @media (min-width: 64rem) {
@@ -524,6 +535,23 @@ footer {
 
       h1 {
         max-width: 840px;
+      }
+    }
+  }
+
+  .pricing {
+    .container {
+      align-items: flex-start;
+      gap: variables.$spacing-900;
+    }
+    &__container {
+      gap: variables.$spacing-375;
+    }
+    .price__tier {
+      align-items: flex-start;
+      text-align: start;
+      h2 {
+        @include mixins.textpreset4;
       }
     }
   }
