@@ -159,6 +159,14 @@ select {
   opacity: 0.7;
 }
 
+.large-text {
+  font-size: 72px;
+  font-family: "DM Serif Display", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
 form#demo .form-group {
   display: flex;
   flex-direction: column;
@@ -194,7 +202,7 @@ form#demo input::placeholder {
     align-items: stretch;
     flex-direction: row;
     gap: 0;
-    min-width: 445px;
+    width: 445px;
     position: relative;
   }
   form#demo .form-group button {
@@ -220,7 +228,7 @@ form#demo input::placeholder {
   --cta-bg: #1a1a1a;
   --container-max-width: 70rem;
   --container-width: 90%;
-  --section-spacing: clamp(2rem, 0.9437rem + 4.507vw, 5rem);
+  --section-spacing: 5rem;
   --card-padding: 1.5rem 2rem;
 }
 
@@ -379,6 +387,12 @@ header .main-nav.visible {
   gap: 1rem;
 }
 
+.our-clients .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
 .our-clients__logo-container {
   display: grid;
   gap: 2.5rem;
@@ -386,6 +400,59 @@ header .main-nav.visible {
 }
 .our-clients__logo svg * {
   fill: #ffffff;
+}
+.our-clients__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.our-clients__content h2 {
+  margin-bottom: -0.5rem;
+}
+
+.features .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.features__top {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.features__top .features__feature {
+  gap: 3rem;
+}
+.features__bottom {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.features__bottom .features__feature {
+  gap: 2rem;
+}
+.features .features__feature {
+  display: flex;
+  flex-direction: column;
+}
+.features .feature__image {
+  margin: 0 auto;
+}
+.features .feature__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cta .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 footer {
@@ -408,6 +475,27 @@ footer .socials-list {
 }
 footer .socials-list .socials-list__item:hover svg * {
   fill: var(--accent-color-hover);
+}
+
+.full-width-image img {
+  width: 100%;
+}
+
+.pricing .tier__features li {
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 1.5rem 6rem;
+  justify-content: center;
+}
+.pricing .tier__features li p {
+  grid-column: 2;
+}
+.pricing .tier__features li.included p {
+  color: var(--header-text-color);
+}
+.pricing .tier__features li:not(.included) svg {
+  display: none;
 }
 
 @media (min-width: 48rem) {
@@ -451,6 +539,12 @@ footer .socials-list .socials-list__item:hover svg * {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .features__bottom {
+    align-items: stretch;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
   footer .container {
     flex-direction: row;
     gap: 4rem;
@@ -458,6 +552,16 @@ footer .socials-list .socials-list__item:hover svg * {
   }
   footer .socials-list {
     margin-left: auto;
+  }
+  .about-hero__content {
+    display: grid;
+    gap: 2rem;
+  }
+  .about-hero__content__row {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 3fr 5fr;
+    text-align: start;
   }
 }
 @media (min-width: 64rem) {
@@ -498,5 +602,38 @@ footer .socials-list .socials-list__item:hover svg * {
   .hero__content p {
     margin-top: -0.5rem;
     padding-left: 30px;
+  }
+  .our-clients .container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .our-clients__content {
+    align-items: flex-start;
+    max-width: 445px;
+    text-align: start;
+  }
+  .features__top .features__feature {
+    flex-direction: row;
+  }
+  .features__top .features__feature:last-child {
+    flex-direction: row-reverse;
+  }
+  .features__bottom {
+    align-items: stretch;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  .cta .container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+  }
+  .about-hero .container {
+    flex-direction: column;
+    text-align: start;
+  }
+  .about-hero .container h1 {
+    max-width: 840px;
   }
 }
