@@ -1,28 +1,88 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-  <!-- 
-    Pricing
-    About
-    Contact
-    Schedule a Demo
+  <section class="contact">
+    <div class="container">
+      <h1>Submit a help request and we'll get in touch shortly.</h1>
+      <form id="contact-form">
+        <div class="success-message">
+          <div class="title">
+            {% include "svgs/icon-check.svg" %}
+            <h2>Request Sent!</h2>
+          </div>
+          <p>Thank you for submitting your request. We'll be in touch soon!</p>
+        </div>
+        <div class="form-group">
+          <label for="full-name">Name</label>
+          <input
+            type="text"
+            id="full-name"
+            name="full-name"
+            oninvalid="this.setCustomValidity('This field is required')"
+            oninput="this.setCustomValidity('')"
+            required
+          />
+          <div class="error-message">This field is required</div>
+        </div>
 
-    Submit a help request and we’ll get in touch shortly.
-    
-    Name
-    Email Address
-    Company Name
-    Title
-    Message
-    Stay up-to-date with company announcements and updates to our API
-    Submit
+        <div class="form-group span-all">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            oninvalid="this.setCustomValidity('Please enter a valid email address')"
+            oninput="this.setCustomValidity('')"
+            required
+          />
+          <div class="error-message">Please enter a valid email address</div>
+        </div>
 
-    Join the thousands of innovators already building with us
+        <div class="form-group">
+          <label for="company-name">Company Name</label>
+          <input
+            type="text"
+            id="company-name"
+            name="company-name"
+            oninvalid="this.setCustomValidity('This field is required')"
+            oninput="this.setCustomValidity('')"
+            required
+          />
+          <div class="error-message">This field is required</div>
+        </div>
 
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
+        <div class="form-group span-all">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            oninvalid="this.setCustomValidity('This field is required')"
+            oninput="this.setCustomValidity('')"
+            required
+          ></textarea>
+          <div class="error-message">This field is required</div>
+        </div>
 
-    Pricing
-    About
-    Contact -->
+        <div class="form-group span-all consent-row">
+          <input
+            type="checkbox"
+            id="consent"
+            name="consent"
+          />
+          <label
+            for="consent"
+            class="consent-label"
+          >
+            Stay up-to-date with company announcements and updates to our API
+          </label>
+        </div>
+
+        <button
+          class="span-all btn btn--tertiary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </section>
 {% endblock %}
