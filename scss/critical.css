@@ -688,13 +688,6 @@ footer .socials-list .socials-list__item:hover svg * {
 }
 
 @media (min-width: 48rem) {
-  .page__background-image {
-    left: -90px;
-  }
-  .page__background-image svg {
-    height: 949px;
-    width: 949px;
-  }
   h1 {
     font-size: 48px;
     font-family: "DM Serif Display", sans-serif;
@@ -802,10 +795,6 @@ footer .socials-list .socials-list__item:hover svg * {
     top: -172px;
     left: auto;
     right: -140px;
-  }
-  .page__background-image svg {
-    height: 780px;
-    width: 780px;
   }
   .hero {
     padding-top: 92px;
