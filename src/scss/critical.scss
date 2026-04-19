@@ -32,11 +32,9 @@
 }
 
 body {
-  line-height: 1.6;
   font-family: "Public Sans", sans-serif;
   color: var(--text-color);
   background-color: var(--bg-color);
-  overflow-x: hidden;
   position: relative;
   transition:
     background-color 0.3s ease,
@@ -46,13 +44,8 @@ body {
 .page__background-image {
   position: absolute;
   top: -555px;
-  left: -50%;
+  right: -50%;
   z-index: -1;
-
-  svg {
-    height: 780px;
-    width: 780px;
-  }
 }
 
 .container {
