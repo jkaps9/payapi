@@ -55,6 +55,7 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
