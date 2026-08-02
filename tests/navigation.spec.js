@@ -3,6 +3,7 @@ import { test, expect } from "@playwright/test";
 test.describe("Navigation and UI", () => {
   test("Mobile navigation toggle opens and closes the menu", async ({
     page,
+    isMobile,
   }) => {
     // 1. Go to the homepage
     await page.goto("/");
@@ -12,23 +13,30 @@ test.describe("Navigation and UI", () => {
     const navToggle = page.locator(".nav-toggle");
     const navMenu = page.locator(".main-nav");
 
-    // 3. Depending on your CSS, check if it's hidden.
-    // If you use `display: none` or `visibility: hidden`:
-    await expect(navMenu).toBeHidden();
-    // OR, if you just slide it off screen, you might check for a class:
-    // await expect(navMenu).not.toHaveClass(/is-active/);
+    if (isMobile) {
+      // --- MOBILE BEHAVIOR ---
+      // 1. Ensure it starts hidden
+      await expect(navMenu).toBeHidden();
 
-    // 4. Click the button to open
-    await navToggle.click();
+      // 2. Click to open
+      await navToggle.click();
 
-    // 5. Verify it opened
-    await expect(navMenu).toBeVisible();
+      // 3. Verify it opened
+      await expect(navMenu).toBeVisible();
 
-    // 6. Click again to close
-    await navToggle.click();
+      // 4. Click to close
+      await navToggle.click();
 
-    // 7. Verify it closed
-    await expect(navMenu).toBeHidden();
+      // 5. Verify it closed
+      await expect(navMenu).toBeHidden();
+    } else {
+      // --- NON-MOBILE (DESKTOP) BEHAVIOR ---
+      // The menu should just be visible by default
+      await expect(navMenu).toBeVisible();
+
+      // Optional but recommended: Verify the hamburger toggle is hidden on desktop
+      await expect(navToggle).toBeHidden();
+    }
   });
 
   test("Form renders and accepts input", async ({ page }) => {
