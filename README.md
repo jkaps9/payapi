@@ -10,6 +10,7 @@ This is a solution to the [PayAPI multi-page website challenge on Frontend Mento
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -42,7 +43,12 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - [11ty](https://11ty.dev) - Static Site Generator
+  - using an SSG has made the process of building a multi-page website easier because I can reuse common elements across pages without having to copy/paste them which could cause problems as more pages are added and an update is needed.
 - [sass](https://sass-lang.com/) - CSS Preprocessor
+  - I chose to use Sass for it's mixins and variable functionality. I also like the style of nesting CSS I can do with Sass. I know some is available in vanilla CSS these days, but it's hard to break the pattern of Sass.
+
+### What I learned
+I learned how to make a multi-page site with 11ty. I further honed my accessibility skills for contact forms. 
 
 ## Author
 
