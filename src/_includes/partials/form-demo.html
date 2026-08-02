@@ -1,10 +1,14 @@
-<form id="demo">
+<form
+  id="demo-{{ title }}"
+  class="demo"
+>
   <div class="form-group">
     <input
       id="email-demo"
       name="email"
       type="email"
       placeholder="Please use a valid email address"
+      autocomplete="email"
       required
     />
     <button
