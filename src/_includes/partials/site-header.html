@@ -9,6 +9,7 @@
         {% include "svgs/logo.svg" %}
       </a>
       <nav
+        id="main-nav"
         class="main-nav row"
         aria-label="main"
       >
@@ -26,7 +27,10 @@
           Schedule a Demo
         </a>
       </nav>
-      <button class="nav-toggle">
+      <button
+        class="nav-toggle"
+        aria-controls="main-nav"
+      >
         <div class="hamburger">{% include "svgs/menu.svg" %}</div>
         <div class="close">{% include "svgs/close.svg" %}</div>
       </button>
