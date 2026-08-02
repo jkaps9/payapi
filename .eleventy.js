@@ -42,14 +42,8 @@ export default function (config) {
 
   config.addWatchTarget("./src/scss/");
 
-  // add date filter
-  config.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_FULL);
-  });
-
   return {
-    pathPrefix:
-      process.env.NODE_ENV === "production" ? "/payapi/" : "/",
+    pathPrefix: process.env.NODE_ENV === "production" ? "/payapi/" : "/",
     markdownTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
