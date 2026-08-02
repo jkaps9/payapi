@@ -6,7 +6,6 @@
   "scripts": {
     "build-ghpages": "npx @11ty/eleventy --pathprefix=/payapi/",
     "start": "npx eleventy --serve",
-    "test": "vitest",
     "lint": "prettier --write ."
   },
   "repository": {
@@ -25,7 +24,6 @@
     "@11ty/eleventy": "^3.1.2",
     "@11ty/eleventy-img": "^6.0.4",
     "prettier-plugin-jinja-template": "^2.1.0",
-    "sass": "^1.93.2",
-    "vitest": "^4.1.10"
+    "sass": "^1.93.2"
   }
 }
