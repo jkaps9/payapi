@@ -19,8 +19,6 @@
               type="text"
               id="full-name"
               name="full-name"
-              oninvalid="this.setCustomValidity('This field can\'t be empty')"
-              oninput="this.setCustomValidity('')"
               placeholder="Name"
               required
             />
@@ -32,12 +30,10 @@
               type="email"
               id="email"
               name="email"
-              oninvalid="this.setCustomValidity('Please enter a valid email address')"
-              oninput="this.setCustomValidity('')"
               placeholder="Email Address"
               required
             />
-            <div class="error-message">Please enter a valid email address</div>
+            <div class="error-message">Please use a valid email address</div>
           </div>
 
           <div class="form-group">
@@ -45,8 +41,6 @@
               type="text"
               id="company-name"
               name="company-name"
-              oninvalid="this.setCustomValidity('This field is required')"
-              oninput="this.setCustomValidity('')"
               placeholder="Company Name"
               required
             />
@@ -58,8 +52,6 @@
               type="text"
               id="company-title"
               name="company-title"
-              oninvalid="this.setCustomValidity('This field is required')"
-              oninput="this.setCustomValidity('')"
               placeholder="Title"
               required
             />
@@ -70,8 +62,6 @@
             <textarea
               name="message"
               id="message"
-              oninvalid="this.setCustomValidity('This field is required')"
-              oninput="this.setCustomValidity('')"
               placeholder="Message"
               required
             ></textarea>
