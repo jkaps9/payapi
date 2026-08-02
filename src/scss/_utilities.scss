@@ -96,7 +96,7 @@ body {
   // sets checkbox color
   accent-color: var(--accent-color);
 }
-form#demo {
+form.demo {
   .form-group {
     display: flex;
     flex-direction: column;
@@ -205,7 +205,7 @@ form#contact-form {
 }
 
 @media (min-width: 48rem) {
-  form#demo {
+  form.demo {
     .form-group {
       align-items: stretch;
       flex-direction: row;
