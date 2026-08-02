@@ -809,7 +809,7 @@ footer .socials-list .socials-list__item:hover svg * {
     justify-content: space-between;
   }
   .hero__image img {
-    transform: translateY(-25px), scale(1.3);
+    transform: translateY(-25px) scale(1.3);
   }
   .hero__content {
     align-items: flex-start;
