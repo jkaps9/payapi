@@ -42,11 +42,48 @@ test.describe("Navigation and UI", () => {
   test("Form renders and accepts input", async ({ page }) => {
     await page.goto("/contact/"); // or wherever your form is
 
-    // Find an input field and type into it
-    const nameInput = page.locator('input[name="full-name"]');
-    await nameInput.fill("Jane Doe");
+    // Full Name
+    await page.getByRole("textbox", { name: "Full Name" }).fill("Jane Doe");
+    await expect(page.getByRole("textbox", { name: "Full Name" })).toHaveValue(
+      "Jane Doe",
+    );
 
-    // Verify the input accepted the text
-    await expect(nameInput).toHaveValue("Jane Doe");
+    // Email Address
+    await page
+      .getByRole("textbox", { name: "Email Address" })
+      .fill("jane.doe@company.com");
+    await expect(
+      page.getByRole("textbox", { name: "Email Address" }),
+    ).toHaveValue("jane.doe@company.com");
+
+    // Company Name
+    await page.getByRole("textbox", { name: "Company Name" }).fill("Company");
+    await expect(
+      page.getByRole("textbox", { name: "Company Name" }),
+    ).toHaveValue("Company");
+
+    // Company Title
+    await page.getByRole("textbox", { name: "Company Title" }).fill("Title");
+    await expect(
+      page.getByRole("textbox", { name: "Company Title" }),
+    ).toHaveValue("Title");
+
+    // Message
+    await page.getByRole("textbox", { name: "Message" }).fill("My Message");
+    await expect(page.getByRole("textbox", { name: "Message" })).toHaveValue(
+      "My Message",
+    );
+
+    // Checkbox
+    await page
+      .getByRole("checkbox", { name: "Stay up-to-date with company" })
+      .check();
+    await expect(
+      page.getByRole("checkbox", { name: "Stay up-to-date with company" }),
+    ).toBeChecked();
+
+    // Submit and Success
+    await page.getByRole("button", { name: "Submit" }).press("Enter");
+    await expect(page.getByRole("status")).toBeVisible();
   });
 });
